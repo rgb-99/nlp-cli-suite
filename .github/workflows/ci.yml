@@ -1,0 +1,26 @@
+name: CLI Suite CI
+
+on: [push, pull_request]
+
+jobs:
+  test-suite:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          
+      - name: Install dependencies
+        run: |
+          pip install click
+          pip install -e .
+          
+      - name: Test CLI Help Menu
+        run: |
+          nlp-tool --help
+          nlp-tool ingest --help
+          nlp-tool benchmark --help
+          
