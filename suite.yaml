@@ -1,0 +1,5 @@
+models:
+  - facebook/opt-125m
+  - gpt2
+tokens: 32
+out_dir: current_results

@@ -16,3 +16,8 @@ env/
 # System files
 .DS_Store
 Thumbs.db
+
+#Results(data outputs)
+results/
+baseline_results/
+current_results/
