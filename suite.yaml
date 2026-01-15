@@ -1,8 +1,6 @@
 models:
-  - gpt2
-  - facebook/opt-125m
   - distilgpt2
   - EleutherAI/pythia-70m
-tokens: 32
-parallel: 2
+tokens: 16
+workers: 2
 out_dir: current_results
