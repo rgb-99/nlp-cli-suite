@@ -3,7 +3,17 @@ name: Research Benchmark CI
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - "nlp_tool/**"
+      - "suite.yaml"
+      - "baseline_results/**"
+
   pull_request:
+    paths:
+      - "nlp_tool/**"
+      - "suite.yaml"
+      - "baseline_results/**"
+
 
 jobs:
   benchmark:
