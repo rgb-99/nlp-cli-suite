@@ -1,0 +1,6 @@
+{
+  "model": "distilgpt2",
+  "throughput": 58.31641627520462,
+  "latency_p50": 697.8135108947754,
+  "memory_mb": 661.73828125
+}
