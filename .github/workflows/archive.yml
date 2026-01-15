@@ -1,0 +1,19 @@
+name: Archive Benchmarks
+on: [push]
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+      - run: pip install hf-inference-benchmark==0.1.4
+      - run: pip install -e .
+      - run: nlp-tool suite suite.yaml --out current_results
+      - run: nlp-tool export current_results artifacts.csv
+      - uses: actions/upload-artifact@v3
+        with:
+          name: benchmark-report
+          path: artifacts.csv

@@ -1,0 +1,17 @@
+name: Regression Guard
+on: [pull_request]
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+      - run: pip install hf-inference-benchmark==0.1.4
+      - run: pip install -e .
+      # Runs the suite to generate "current" data in the CI environment
+      - run: nlp-tool suite suite.yaml --out current_results
+      # Compares it against your checked-in baseline
+      - run: nlp-tool compare baseline_results current_results
