@@ -1,6 +1,0 @@
-{
-  "model": "facebook/opt-125m",
-  "throughput": 53.65570475894421,
-  "latency_p50": 549.2048263549805,
-  "memory_mb": 800.43359375
-}
