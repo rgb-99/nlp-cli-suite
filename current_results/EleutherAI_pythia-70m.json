@@ -1,0 +1,6 @@
+{
+  "model": "EleutherAI/pythia-70m",
+  "throughput": 117.5438506763221,
+  "latency_p50": 152.25791931152344,
+  "memory_mb": 591.3359375
+}

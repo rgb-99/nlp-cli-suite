@@ -18,6 +18,11 @@ env/
 Thumbs.db
 
 #Results(data outputs)
-results/
-baseline_results/
-current_results/
+!results/
+!baseline_results/
+!current_results/
+
+# Python distribution artifacts
+*.egg-info/
+dist/
+build/
