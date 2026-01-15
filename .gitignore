@@ -17,12 +17,32 @@ env/
 .DS_Store
 Thumbs.db
 
-#Results(data outputs)
-!results/
-!baseline_results/
-!current_results/
-
 # Python distribution artifacts
 *.egg-info/
 dist/
 build/
+
+#clutter
+*.egg-info/
+__pycache__/
+.venv/
+env/
+.pytest_cache/
+
+
+# Generated experiment outputs
+results/
+baseline_results/
+current_results/
+*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+build/
+dist/
+.pytest_cache/

@@ -71,7 +71,7 @@ pip install -e .
 ```bash
 nlp-tool --help
 ``` 
-```
+
 |Command |Purpose|
 |------|----|
 |ingest	|Dataset ingestion|
@@ -79,7 +79,7 @@ nlp-tool --help
 |suite	|Run multi-model suites|
 |report	|Generate leaderboards|
 |compare	|Detect regressions|
-``` 
+
 ---
 
 ## Run a Research Suite
@@ -129,6 +129,9 @@ gpt2                        50.5         3652.8        854.1
 ---
 
 ## Regression Detection
+
+> **Why explicit paths?** We use `./baseline_results` (versioned) vs `./current_results` (ephemeral) to maintain **Environment Parity**. This ensures that the regression logic is identical whether it's running on your local Windows machine or a stateless Linux runner in GitHub Actions.
+
 ```bash
 
 nlp-tool compare baseline_results current_results
